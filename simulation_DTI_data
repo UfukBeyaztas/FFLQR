@@ -1,4 +1,4 @@
-source("auxiliary_f_qr_dtı.R")
+source("auxiliary_f_qr_dti.R")
 library(refund)
 
 # Number of simulations
