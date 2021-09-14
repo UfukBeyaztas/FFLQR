@@ -280,7 +280,7 @@ var_select = function(Y, X, tau, ncompX=2, ncompY=2, rangevalY, rangevalX, nbasi
       main_model_start = cbind(main_model_start, fsco_X[[BIC_next2]])
       BIC_forw = BIC_next
       X_next[f1] = BIC_next2
-    }else if(cut_off >= 0.98){
+    }else if(cut_off >= 0.95){
       main_model_start = main_model_start
       BIC_forw = BIC_forw
       X_next[f1] = X_next[f1]
