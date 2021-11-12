@@ -56,11 +56,11 @@ model_qr_selected = fpca(fY = Y, fX = X, fX_test = X_test, fmodel = "selected", 
                          fnbasisY = K_Y, fnbasisX = K_X, fncomp_Y = 5, fncomp_X =5)
 
 
-# MSPE under true model
+# MSPE under full model
 mean((Y_test - model_qr_full$pred)^2) # 0.04557994
 # MSPE under true model
 mean((Y_test - model_qr_true$pred)^2) # 0.03053818
-# MSPE under true model
+# MSPE under selected model
 mean((Y_test - model_qr_selected$pred)^2) # 0.03906812
 
 # Plot of the functional response in the test sample
@@ -98,9 +98,9 @@ for(is in 1:nrow(Y_test)){
 
 # score and CPD values under full model
 apply(int_score_qrq_full, 2, mean) # 2.57259747 0.06736667
-# score and CPD values under full model
+# score and CPD values under true model
 apply(int_score_qrq_true, 2, mean) # 2.998603 0.056200
-# score and CPD values under full model
+# score and CPD values under selected model
 apply(int_score_qrq_selected, 2, mean) # 2.77259709 0.04993333
 
 
@@ -129,11 +129,11 @@ model_qr_selected = fpca(fY = Y, fX = X, fX_test = X_test, fmodel = "selected", 
                          fnbasisY = K_Y, fnbasisX = K_X, fncomp_Y = 5, fncomp_X =5)
 
 
-# MSPE under true model
+# MSPE under full model
 mean((Y_test - model_qr_full$pred)^2) # 0.4538092
 # MSPE under true model
 mean((Y_test - model_qr_true$pred)^2) # 0.3418706
-# MSPE under true model
+# MSPE under selected model
 mean((Y_test - model_qr_selected$pred)^2) # 0.3121307
 
 # Plot of the functional response in the test sample
@@ -171,7 +171,7 @@ for(is in 1:nrow(Y_test)){
 
 # score and CPD values under full model
 apply(int_score_qrq_full, 2, mean) # 6.7369230 0.1597667
-# score and CPD values under full model
+# score and CPD values under true model
 apply(int_score_qrq_true, 2, mean) # 3.90554459 0.07346667
-# score and CPD values under full model
+# score and CPD values under selected model
 apply(int_score_qrq_selected, 2, mean) # 4.01211945 0.04986667
